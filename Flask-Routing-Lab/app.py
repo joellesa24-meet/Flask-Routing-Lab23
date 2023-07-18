@@ -8,10 +8,15 @@ app = Flask(  # Create a flask app
 )
 
 # Your code should be below
-
-
-
-
+@app.route('/')
+def hello_world():
+    return render_template("home.html")
+@app.route('/orignal')
+def orignal_world():
+    return render_template("orignalproducts.html")
+@app.route ('/other')
+def others_world():
+    return render_template("otherproduct.html")
 # Your code should be above
 
 if __name__ == "__main__":  # Makes sure this is the main process
